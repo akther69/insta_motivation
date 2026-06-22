@@ -6,11 +6,14 @@
 }
 
 body{
-    min-height:100vh;
+    height:100vh;
+    margin:0;
+
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:20px;
+
+    overflow:hidden;
 
     background:linear-gradient(
         45deg,
@@ -34,6 +37,7 @@ body{
 .container{
     width:100%;
     max-width:650px;
+    margin:10px;
 
     background:white;
     border-radius:32px;
@@ -122,6 +126,12 @@ button:hover{
 }
 
 @media(max-width:480px){
+
+    html,
+body{
+    overflow:hidden;
+    height:100%;
+}
 
     .container{
     width:82%;
