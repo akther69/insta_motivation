@@ -163,3 +163,4 @@ function copyQuote(){
 window.onload = function () {
     newQuote();
 };
+
