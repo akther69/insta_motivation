@@ -152,24 +152,6 @@ function copyQuote() {
     alert("Quote copied!");
 }
 
-function shareQuote() {
-
-    const quote =
-        document.getElementById("quote").innerText;
-
-    if (navigator.share) {
-
-        navigator.share({
-            title: "Daily Motivation",
-            text: quote
-        });
-
-    } else {
-
-        navigator.clipboard.writeText(quote);
-        alert("Quote copied for sharing!");
-    }
-}
 
 window.onload = function () {
     newQuote();
