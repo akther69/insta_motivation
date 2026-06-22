@@ -117,12 +117,22 @@ function newQuote() {
 }
 
 function likeQuote() {
-    isLiked = !isLiked; // Toggle like state
 
-    const likeBtn = document.querySelector(".like-btn");
-    if (isLiked) {
+    isLiked = !isLiked;
+
+    const likeBtn =
+        document.querySelector(".like-btn");
+
+    if(isLiked){
+
         likeBtn.classList.add("active");
-    } else {
+
+        likeBtn.style.animation = "none";
+        likeBtn.offsetHeight;
+        likeBtn.style.animation = "heartPop .4s ease";
+
+    }else{
+
         likeBtn.classList.remove("active");
     }
 }
@@ -133,6 +143,21 @@ function copyQuote(){
         document.getElementById("quote").innerText;
 
     navigator.clipboard.writeText(quote);
+
+    const btn =
+        document.querySelector(".copy-btn");
+
+    btn.innerHTML = "✅";
+
+    btn.classList.add("copied");
+
+    setTimeout(() => {
+
+        btn.innerHTML = "📋";
+
+        btn.classList.remove("copied");
+
+    },1000);
 }
 
 window.onload = function () {
