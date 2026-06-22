@@ -100,58 +100,38 @@ const quotes = [
 ];
 
 let currentQuoteIndex = 0;
-let likes = 0;
 let isLiked = false;
 
 function newQuote() {
+    currentQuoteIndex = Math.floor(Math.random() * quotes.length);
+    document.getElementById("quote").innerText = quotes[currentQuoteIndex];
 
-    currentQuoteIndex =
-        Math.floor(Math.random() * quotes.length);
-
-    document.getElementById("quote").innerText =
-        quotes[currentQuoteIndex];
-
-    const quoteNumber =
-        document.getElementById("quoteNumber");
-
+    const quoteNumber = document.getElementById("quoteNumber");
     if (quoteNumber) {
-        quoteNumber.innerText =
-            currentQuoteIndex + 1;
+        quoteNumber.innerText = currentQuoteIndex + 1;
     }
 
-    likes = 0;
+    // Reset like state on new quote
     isLiked = false;
-
-    document.getElementById("likeCount").innerText = "0";
-
-    document.querySelector(".like-btn")
-        .classList.remove("active");
+    document.querySelector(".like-btn").classList.remove("active");
 }
 
 function likeQuote() {
+    isLiked = !isLiked; // Toggle like state
 
-    if (isLiked) return;
-
-    isLiked = true;
-    likes = 1;
-
-    document.getElementById("likeCount")
-        .innerText = likes;
-
-    document.querySelector(".like-btn")
-        .classList.add("active");
+    const likeBtn = document.querySelector(".like-btn");
+    if (isLiked) {
+        likeBtn.classList.add("active");
+    } else {
+        likeBtn.classList.remove("active");
+    }
 }
 
 function copyQuote() {
-
-    const quote =
-        document.getElementById("quote").innerText;
-
+    const quote = document.getElementById("quote").innerText;
     navigator.clipboard.writeText(quote);
-
     alert("Quote copied!");
 }
-
 
 window.onload = function () {
     newQuote();
