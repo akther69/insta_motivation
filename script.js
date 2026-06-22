@@ -127,10 +127,12 @@ function likeQuote() {
     }
 }
 
-function copyQuote() {
-    const quote = document.getElementById("quote").innerText;
+function copyQuote(){
+
+    const quote =
+        document.getElementById("quote").innerText;
+
     navigator.clipboard.writeText(quote);
-    alert("Quote copied!");
 }
 
 window.onload = function () {
