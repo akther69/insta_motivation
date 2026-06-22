@@ -124,11 +124,10 @@ button:hover{
 @media(max-width:480px){
 
     .container{
-        width:82%;
-        max-width:280px;
-        padding:16px;
-        border-radius:18px;
-    }
+    width:82%;
+    max-width:280px;
+    padding:16px;
+}
 
     h1{
         font-size:1.4rem;
@@ -141,16 +140,16 @@ button:hover{
     }
 
     .quote-box{
-        min-height:90px;
-        padding:12px;
-        margin-bottom:15px;
-        border-radius:16px;
-    }
+    min-height:90px;
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:16px;
+}
 
     .quote-box p{
-        font-size:0.9rem;
-        line-height:1.4;
-    }
+    font-size:0.9rem;
+    line-height:1.4;
+}
 }
 
 .quote-counter{
