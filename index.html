@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Motivation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glow glow1"></div>
+<div class="glow glow2"></div>
+
+    <div class="container">
+
+    <div class="logo">📸</div>
+
+    <h1>Daily Motivation</h1>
+
+    <p class="subtitle">
+        Your daily dose of inspiration
+    </p>
+
+    <div class="quote-box">
+        <p id="quote">
+            Click below for motivation!
+        </p>
+    </div>
+    <div class="quote-counter">
+    🔥 Quote #<span id="quoteNumber">0</span>
+</div>
+    <div class="actions">
+
+    <button class="action-btn like-btn" onclick="likeQuote()">
+        ❤️ <span id="likeCount">0</span>
+    </button>
+
+    <button class="action-btn" onclick="copyQuote()">
+        📋
+    </button>
+
+    <button class="action-btn" onclick="shareQuote()">
+        📤
+    </button>
+
+</div>
+
+    <button onclick="newQuote()">
+        Get Quote ✨
+    </button>
+
+    <div class="footer">
+         Created by @suhaib_akther_s
+    </div>
+
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
